@@ -17,13 +17,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsComponent } from './news/news.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    NewsComponent
+    NewsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
