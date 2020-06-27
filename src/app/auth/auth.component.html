@@ -22,10 +22,25 @@
       <div class="mask-right" [hidden]="!right"></div>
       <div class="auth-login" *ngIf="left">
         <!-- LOGIN -->
-
+        <div class="auth-form-container">
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input type="text" placeholder="Username" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" placeholder="Password" />
+          </mat-form-field>
+        </div>        
       </div>
       <div class="auth-register" *ngIf="right">
         <!-- REGISTER -->
+        <div class="auth-form-container">
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" />
+          </mat-form-field>
+        </div>
       </div>
     </div>
   </div>
