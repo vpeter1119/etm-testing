@@ -6,19 +6,50 @@
   color: @com-black;
 }
 
+/* Materialize Classes */
+
+.input-field {
+    display: block;
+}
+
+/* label color */
+.input-field label {
+  color: @com-black;
+}
+/* label focus color */
+.input-field input:focus + label {
+  color: @mythos-dark;
+}
+/* label underline focus color */
+.input-field input:focus {
+  border-bottom: 1px solid @mythos-dark;
+  box-shadow: 0 1px 0 0 @com-black;
+}
+/* valid color */
+.input-field input.valid {
+  border-bottom: 1px solid @com-black;
+  box-shadow: 0 1px 0 0 @com-black;
+}
+/* invalid color */
+.input-field input.invalid {
+  border-bottom: 1px solid @com-black;
+  box-shadow: 0 1px 0 0 @com-black;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: @mythos-dark;
+}
+
 /* Classes */
 
 .auth-action-button {
   background-color: @mythos-dark;
   font-family: "Abril Fatface";
-  font-weight: 900;
+  font-weight: 400;
   color: @com-white;
   letter-spacing: 2px;
 }
 
-.auth-content {
-    margin-top: 36px;
-}
 .auth-card {
   background-color: @logos-light;
   position: relative;
@@ -33,8 +64,20 @@
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.14);
 }
 
+.auth-checkbox {
+    color: @com-black;
+}
+
+.auth-content {
+    margin-top: 36px;
+}
+
 .auth-form-container {
     margin: 5% 10%;
+    color: @com-black;
+}
+
+.auth-label {
     color: @com-black;
 }
 

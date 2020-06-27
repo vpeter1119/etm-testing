@@ -7,14 +7,14 @@
               [ngClass]="left ? 'auth-tab active' : 'auth-tab'"
               fxFlex="30%"
               (click)="SwitchTab('left')">
-        Login
+        LOGIN
       </button>
       <button mat-raised-button
               class="auth-tab"
               [ngClass]="right ? 'auth-tab active' : 'auth-tab'"
               fxFlex="30%"
               (click)="SwitchTab('right')">
-        Register
+        REGISTER
       </button>
     </div>
     <div class="auth-card">
@@ -22,26 +22,48 @@
       <div class="mask-right" [hidden]="!right"></div>
       <div class="auth-login" *ngIf="left">
         <!-- LOGIN -->
-        <div class="auth-form-container" fxLayout="col wrap" fxLayoutGap="10px">
-          <mat-form-field dark appearance="outline">
-            <mat-label>Username</mat-label>
-            <input matInput placeholder="Username" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" placeholder="Password" />
-          </mat-form-field>
+        <div class="auth-form-container">
+          <div class="input-field">
+            <input id="username-login" type="text" class="validate">
+            <label for="username-login">Username</label>
+          </div>
+          <div class="input-field">
+            <input id="password-login" type="password" class="validate">
+            <label for="password-login">Password</label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" class="auth-checkbox" />
+              <span class="auth-label">Remember me</span>
+            </label>
+          </div>
           <br />
-          <button mat-raised-button type="button" dark class="auth-action-button">Login</button>
+          <button mat-raised-button type="button" dark class="auth-action-button">LOGIN</button>
         </div>        
       </div>
       <div class="auth-register" *ngIf="right">
         <!-- REGISTER -->
         <div class="auth-form-container">
-          <mat-form-field appearance="outline">
-            <mat-label>Username</mat-label>
-            <input matInput placeholder="Username" />
-          </mat-form-field>
+          <div class="input-field">
+            <input id="username-reg" type="text" class="validate">
+            <label for="username-reg">Username</label>
+          </div>
+          <div class="input-field">
+            <input id="password-reg" type="password" class="validate">
+            <label for="password-reg">Password</label>
+          </div>
+          <div class="input-field">
+            <input id="password-check" type="password" class="validate">
+            <label for="password-check">Password again (must match the previous one)</label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" class="auth-checkbox" />
+              <span class="auth-label">I agree to stuff yo</span>
+            </label>
+          </div>
+          <br />
+          <button mat-raised-button type="button" dark class="auth-action-button">REGISTER</button>
         </div>
       </div>
     </div>
