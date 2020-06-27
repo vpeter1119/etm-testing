@@ -1,36 +1,21 @@
 <div class="auth-content" fxLayout="row wrap" fxLayoutGap="5%">
 
-  <div class="text-normal" fxFlex="45%" fxFlex.lt-md="100%">
-    <h1 class="lookatthis">Login or register and create your Rift right away!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam</p>
-  </div>
-
   <div fxFlex="45%" fxFlex.lt-md="100%">
-    <!--<div class="auth-tabs-container" fxLayout="row wrap">
-    <div class="auth-tabs" fxFlex="45%" fxFlex.lt-md="100%">
-      <div fxLayout="row wrap">
-        <div id="tab-login" class="auth-tab" fxFlex="50%" fxFlex.lt-md="50%">
-          <p>Login</p>
-        </div>
-        <div id="tab-register" class="auth-tab" fxFlex="50%" fxFlex.lt-md="50%">
-          <p>Register</p>
-        </div>
-      </div>
-    </div>
-  </div>-->
-    <div fxLayout="row wrap" fxLayoutGap="1%">      
-      <button
-              mat-raised-button
+    <div fxLayout="row wrap" fxLayoutGap="1%">
+      <button mat-raised-button
               class="auth-tab"
               [ngClass]="left ? 'auth-tab active' : 'auth-tab'"
               fxFlex="30%"
-              (click)="SwitchTab('left')">Login</button>
-      <button
-              mat-raised-button
+              (click)="SwitchTab('left')">
+        Login
+      </button>
+      <button mat-raised-button
               class="auth-tab"
               [ngClass]="right ? 'auth-tab active' : 'auth-tab'"
               fxFlex="30%"
-              (click)="SwitchTab('right')">Register</button>
+              (click)="SwitchTab('right')">
+        Register
+      </button>
     </div>
     <div class="auth-card">
       <div class="mask-left" [hidden]="!left"></div>
@@ -38,6 +23,11 @@
       <div class="auth-login" *ngIf="left">Login</div>
       <div class="auth-register" *ngIf="right">Register</div>
     </div>
+  </div>
+
+  <div class="text-normal" fxFlex="45%" fxFlex.lt-md="100%">
+    <h1 class="lookatthis">Login or register and create your Rift right away!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam</p>
   </div>
 
 </div>
