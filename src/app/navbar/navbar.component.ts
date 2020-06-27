@@ -21,4 +21,9 @@ export class NavbarComponent implements OnInit {
     const dialog = this._dialog.open(AuthComponent);
   }
 
+  scroll(id: string) {
+    let el = document.getElementById(id);
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+
 }
