@@ -22,16 +22,17 @@
       <div class="mask-right" [hidden]="!right"></div>
       <div class="auth-login" *ngIf="left">
         <!-- LOGIN -->
-        <div class="auth-form-container">
-          <mat-form-field appearance="outline">
+        <div class="auth-form-container" fxLayout="col wrap" fxLayoutGap="10px">
+          <mat-form-field dark appearance="outline">
             <mat-label>Username</mat-label>
             <input matInput placeholder="Username" />
           </mat-form-field>
-          <br>
           <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input matInput type="password" placeholder="Password" />
           </mat-form-field>
+          <br />
+          <button mat-raised-button type="button" dark class="auth-action-button">Login</button>
         </div>        
       </div>
       <div class="auth-register" *ngIf="right">
@@ -47,7 +48,7 @@
   </div>
 
   <div class="text-normal" fxFlex="45%" fxFlex.lt-md="100%">
-    <h1 class="lookatthis">Login or register and create your Rift right away!</h1>
+    <h1 class="lookatthis">Create your own Rift in just a few clicks!</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam</p>
   </div>
 
