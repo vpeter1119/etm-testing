@@ -4,13 +4,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Material
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule, MatDrawerContainer } from '@angular/material/sidenav';
+
+
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule, MatDrawerContainer } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Components
 import { AppComponent } from './app.component';
@@ -33,13 +36,14 @@ import { AuthComponent } from './auth/auth.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatToolbarModule,
-    MatSidenavModule,
+    MatCardModule,
+    MatDialogModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatCardModule,
+    MatSidenavModule,
     MatTabsModule,
+    MatToolbarModule,
   ],
   providers: [
     MatDrawerContainer,
