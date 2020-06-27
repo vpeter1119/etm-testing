@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule, MatDrawerContainer } from '@angular/material/sidenav';
@@ -38,6 +39,7 @@ import { AuthComponent } from './auth/auth.component';
     FlexLayoutModule,
     MatCardModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
