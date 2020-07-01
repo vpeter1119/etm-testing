@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 // Material
-
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -40,6 +40,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase),
     MatCardModule,
     MatDialogModule,
     MatFormFieldModule,

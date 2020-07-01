@@ -71,7 +71,15 @@
 
   <div class="text-normal" fxFlex="45%" fxFlex.lt-md="100%">
     <h1 class="lookatthis">Create your own Rift now!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam</p>
+    <p>Create your account (or log in if you already have one) and create your first Rift in a few clicks!</p>
+    <p>You can also use one of these options to log in:</p>
+    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width="" (click)="authService.FacebookAuth()"></div>
+    <!--<div class="formGroup">
+    <button type="button" (click)="authService.FacebookAuth()">
+      Log in with Facebook
+    </button>
+  </div>
+    -->
   </div>
 
 </div>
