@@ -54,3 +54,4 @@ Thumbs.db
 /.editorconfig
 /karma.conf.js
 /browserslist
+*/environments
