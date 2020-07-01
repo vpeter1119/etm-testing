@@ -24,8 +24,8 @@
         <!-- LOGIN -->
         <div class="auth-form-container">
           <div class="input-field">
-            <input id="username-login" type="text" class="validate">
-            <label for="username-login">Username</label>
+            <input id="email-login" type="email" class="validate">
+            <label for="email-login">Email</label>
           </div>
           <div class="input-field">
             <input id="password-login" type="password" class="validate">
@@ -38,15 +38,15 @@
             </label>
           </div>
           <br />
-          <button mat-raised-button type="button" dark class="auth-action-button">LOGIN</button>
+          <button mat-raised-button type="button" dark class="auth-action-button" (click)="Login()">LOGIN</button>
         </div>        
       </div>
       <div class="auth-register" *ngIf="right">
         <!-- REGISTER -->
         <div class="auth-form-container">
           <div class="input-field">
-            <input id="username-reg" type="text" class="validate">
-            <label for="username-reg">Username</label>
+            <input id="email-reg" type="email" class="validate">
+            <label for="email-reg">Email</label>
           </div>
           <div class="input-field">
             <input id="password-reg" type="password" class="validate">
@@ -73,13 +73,12 @@
     <h1 class="lookatthis">Create your own Rift now!</h1>
     <p>Create your account (or log in if you already have one) and create your first Rift in a few clicks!</p>
     <p>You can also use one of these options to log in:</p>
-    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width="" (click)="authService.FacebookAuth()"></div>
-    <!--<div class="formGroup">
-    <button type="button" (click)="authService.FacebookAuth()">
-      Log in with Facebook
-    </button>
-  </div>
-    -->
+    <!--
+  <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width="" (click)="authService.FacebookAuth()"></div>
+  -->
+    <button class="btn-floating btn-medium waves-effect waves-light auth-social-button facebook" (click)="authService.FacebookAuth()"><i class="fab fa-facebook"></i></button>
+    <button class="btn-floating btn-medium waves-effect waves-light auth-social-button" (click)="authService.GoogleAuth()"><i class="fab fa-google"></i></button>
+
   </div>
 
 </div>

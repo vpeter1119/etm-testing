@@ -19,6 +19,7 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Switch between Login and Register tabs
   SwitchTab(s): void {
     if (s === "left") {
       this.left = true;
@@ -27,6 +28,15 @@ export class AuthComponent implements OnInit {
       this.left = false;
       this.right = true;
     }
+  }
+
+  // Login with email and password
+  Login() {
+    const input = {
+      email: "example@example.com",
+      password: "123456"
+    }    
+    this.authService.Login(input);
   }
 
 }
