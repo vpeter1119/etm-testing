@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material
 import { MatButtonModule } from '@angular/material/button';
@@ -41,6 +42,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
     MatCardModule,
     MatDialogModule,
     MatFormFieldModule,
