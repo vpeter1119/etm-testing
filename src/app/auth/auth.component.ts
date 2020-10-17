@@ -33,8 +33,8 @@ export class AuthComponent implements OnInit {
   // Login with email and password
   Login() {
     const input = {
-      email: "example@example.com",
-      password: "123456"
+      username: "username",
+      password: "password"
     }    
     this.authService.Login(input);
   }

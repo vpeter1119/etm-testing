@@ -23,20 +23,22 @@
       <div class="auth-login" *ngIf="left">
         <!-- LOGIN -->
         <div class="auth-form-container">
-          <div class="input-field">
-            <input id="email-login" type="email" class="validate">
-            <label for="email-login">Email</label>
-          </div>
-          <div class="input-field">
-            <input id="password-login" type="password" class="validate">
-            <label for="password-login">Password</label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" class="auth-checkbox" />
-              <span class="auth-label">Remember me</span>
-            </label>
-          </div>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+                <div class="input-field">
+                    <input id="username-login" type="text" class="validate" ngModel name="username">
+                    <label for="username-login">Username</label>
+                </div>
+                <div class="input-field">
+                    <input id="password-login" type="password" class="validate" ngModel name="password">
+                    <label for="password-login">Password</label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" class="auth-checkbox" />
+                        <span class="auth-label">Remember me</span>
+                    </label>
+                </div>
+            </form>
           <br />
           <button mat-raised-button type="button" dark class="auth-action-button" (click)="Login()">LOGIN</button>
         </div>        
@@ -54,7 +56,7 @@
           </div>
           <div class="input-field">
             <input id="password-check" type="password" class="validate">
-            <label for="password-check">Password again (must match the previous one)</label>
+            <label for="password-check">Confirm Password</label>
           </div>
           <div>
             <label>
