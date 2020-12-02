@@ -1,12 +1,12 @@
 <div class="article-preview" fxLayout="row wrap" fxLayoutGap="10px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="10px">
   <div class="card medium hoverable article-card" fxFlex="45%" fxFlex.lt-md="100%" *ngFor="let article of articles">
     <div class="card-image">
-      <img src="http://petervertesi.com/maps/img/bg.jpg">
+      <img src="/assets/cover-001.jpg">
       <span class="card-title article-card-title">{{ article.title }}</span>
     </div>
     <div class="card-content article-card-content">
       <p>
-        {{ article.content.substring(0,250)+'...' }}
+        {{ article.content.length > 250 ? article.content.substring(0,250)+'...' : article.content }}
       </p>
     </div>
   </div>
