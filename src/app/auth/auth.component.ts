@@ -10,7 +10,7 @@ import { AuthService } from './auth.service';
 export class AuthComponent implements OnInit {
 
   constructor(
-    public authService: AuthService,
+	public authService: AuthService,
   ) { }
 
   left = true;
@@ -21,22 +21,27 @@ export class AuthComponent implements OnInit {
 
   // Switch between Login and Register tabs
   SwitchTab(s): void {
-    if (s === "left") {
-      this.left = true;
-      this.right = false;
-    } else {
-      this.left = false;
-      this.right = true;
-    }
+	if (s === "left") {
+	  this.left = true;
+	  this.right = false;
+	} else {
+	  this.left = false;
+	  this.right = true;
+	}
   }
 
   // Login with email and password
-  Login() {
-    const input = {
-      username: "username",
-      password: "password"
-    }    
-    this.authService.Login(input);
+  Login(formData) {
+	console.warn(formData.form.value);
+	const input = {
+	  username: formData.form.value.username,
+	  password: formData.form.value.password
+	}    
+	this.authService.Login(input);
   }
+
+	Register(formData) {
+		console.warn(formData.form.value);
+    }
 
 }

@@ -23,7 +23,7 @@
       <div class="auth-login" *ngIf="left">
         <!-- LOGIN -->
         <div class="auth-form-container">
-            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <form #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
                 <div class="input-field">
                     <input id="username-login" type="text" class="validate" ngModel name="username">
                     <label for="username-login">Username</label>
@@ -38,35 +38,41 @@
                         <span class="auth-label">Remember me</span>
                     </label>
                 </div>
+                <br />
+                <button mat-raised-button type="submit" dark class="auth-action-button">LOGIN</button>
             </form>
-          <br />
-          <button mat-raised-button type="button" dark class="auth-action-button" (click)="Login()">LOGIN</button>
         </div>        
       </div>
       <div class="auth-register" *ngIf="right">
-        <!-- REGISTER -->
-        <div class="auth-form-container">
-          <div class="input-field">
-            <input id="email-reg" type="email" class="validate">
-            <label for="email-reg">Email</label>
+          <!-- REGISTER -->
+          <div class="auth-form-container">
+              <form #registerForm="ngForm" (ngSubmit)="Register(registerForm)">
+                  <div class="input-field">
+                      <input id="email-register" type="email" class="validate" ngModel name="email">
+                      <label for="email-register">Email</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="username-register" type="text" class="validate" ngModel name="username">
+                      <label for="username-register">Username</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="password-register" type="password" class="validate" ngModel name="password">
+                      <label for="password-register">Password</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="re-password-register" type="password" class="validate" ngModel name="re-password">
+                      <label for="re-password-register">Confirm Password</label>
+                  </div>
+                  <div>
+                      <label>
+                          <input type="checkbox" class="auth-confirm" />
+                          <span class="auth-label">I agree to the etc etc</span>
+                      </label>
+                  </div>
+                  <br />
+                  <button mat-raised-button type="submit" dark class="auth-action-button">REGISTER</button>
+              </form>
           </div>
-          <div class="input-field">
-            <input id="password-reg" type="password" class="validate">
-            <label for="password-reg">Password</label>
-          </div>
-          <div class="input-field">
-            <input id="password-check" type="password" class="validate">
-            <label for="password-check">Confirm Password</label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" class="auth-checkbox" />
-              <span class="auth-label">I agree to stuff yo</span>
-            </label>
-          </div>
-          <br />
-          <button mat-raised-button type="button" dark class="auth-action-button">REGISTER</button>
-        </div>
       </div>
     </div>
   </div>
