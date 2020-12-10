@@ -26,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NewsComponent } from './news/news.component';
 import { AuthComponent } from './auth/auth.component';
 import { ContactComponent } from './contact/contact.component';
+import { CharacterViewComponent } from './characters/character-view/character-view.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactComponent } from './contact/contact.component';
     NavbarComponent,
     NewsComponent,
     AuthComponent,
-    ContactComponent
+    ContactComponent,
+    CharacterViewComponent
   ],
   imports: [
     BrowserModule,
