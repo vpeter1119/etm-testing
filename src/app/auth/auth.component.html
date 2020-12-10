@@ -1,0 +1,86 @@
+<div class="auth-content" fxLayout="row wrap" fxLayoutGap="5%">
+
+  <div fxFlex="45%" fxFlex.lt-md="100%">
+    <div fxLayout="row wrap" fxLayoutGap="1%">
+      <button mat-raised-button
+              class="auth-tab"
+              [ngClass]="left ? 'auth-tab active' : 'auth-tab'"
+              fxFlex="30%"
+              (click)="SwitchTab('left')">
+        LOGIN
+      </button>
+      <button mat-raised-button
+              class="auth-tab"
+              [ngClass]="right ? 'auth-tab active' : 'auth-tab'"
+              fxFlex="30%"
+              (click)="SwitchTab('right')">
+        REGISTER
+      </button>
+    </div>
+    <div class="auth-card">
+      <div class="mask-left" [hidden]="!left"></div>
+      <div class="mask-right" [hidden]="!right"></div>
+      <div class="auth-login" *ngIf="left">
+        <!-- LOGIN -->
+        <div class="auth-form-container">
+            <form #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
+                <div class="input-field">
+                    <input id="username-login" type="text" class="validate" ngModel name="username">
+                    <label for="username-login">Username</label>
+                </div>
+                <div class="input-field">
+                    <input id="password-login" type="password" class="validate" ngModel name="password">
+                    <label for="password-login">Password</label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" class="auth-checkbox" />
+                        <span class="auth-label">Remember me</span>
+                    </label>
+                </div>
+                <br />
+                <button mat-raised-button type="submit" dark class="auth-action-button">LOGIN</button>
+            </form>
+        </div>        
+      </div>
+      <div class="auth-register" *ngIf="right">
+          <!-- REGISTER -->
+          <div class="auth-form-container">
+              <form #registerForm="ngForm" (ngSubmit)="Register(registerForm)">
+                  <div class="input-field">
+                      <input id="email-register" type="email" class="validate" ngModel name="email">
+                      <label for="email-register">Email</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="username-register" type="text" class="validate" ngModel name="username">
+                      <label for="username-register">Username</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="password-register" type="password" class="validate" ngModel name="password">
+                      <label for="password-register">Password</label>
+                  </div>
+                  <div class="input-field">
+                      <input id="re-password-register" type="password" class="validate" ngModel name="re-password">
+                      <label for="re-password-register">Confirm Password</label>
+                  </div>
+                  <div>
+                      <label>
+                          <input type="checkbox" class="auth-confirm" />
+                          <span class="auth-label">I agree to the etc etc</span>
+                      </label>
+                  </div>
+                  <br />
+                  <button mat-raised-button type="submit" dark class="auth-action-button">REGISTER</button>
+              </form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-normal" fxFlex="45%" fxFlex.lt-md="100%">
+    <h1 class="lookatthis">Create your own Rift now!</h1>
+    <p>Create your account (or log in if you already have one) and create your first Rift in a few clicks!</p>
+    
+  </div>
+
+</div>
