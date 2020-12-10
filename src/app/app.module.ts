@@ -26,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NewsComponent } from './news/news.component';
 import { AuthComponent } from './auth/auth.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 import { CharacterViewComponent } from './characters/character-view/character-view.component';
 
 @NgModule({
@@ -36,6 +37,7 @@ import { CharacterViewComponent } from './characters/character-view/character-vi
     NewsComponent,
     AuthComponent,
     ContactComponent,
+    FooterComponent,
     CharacterViewComponent
   ],
   imports: [
